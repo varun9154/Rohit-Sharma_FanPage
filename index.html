@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohit Sharma - Home</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        /* Navigation Menu */
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: inline-flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+            position: relative;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #ff5a5f;
+            border-radius: 5px;
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            list-style: none;
+            padding: 10px 0;
+            margin: 0;
+            top: 40px;
+        }
+
+        nav ul li:hover ul {
+            display: block;
+        }
+
+        nav ul li ul li {
+            margin: 0;
+            width: 200px;
+        }
+
+        nav ul li ul li a {
+            padding: 10px 15px;
+            font-size: 1em;
+            display: block;
+            text-align: left;
+        }
+
+        nav ul li ul li a:hover {
+            background-color: #ff5a5f;
+        }
+
+        /* Search Bar */
+        #search-form {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        #search-bar {
+            padding: 8px;
+            font-size: 1em;
+            border: none;
+            border-radius: 20px;
+            width: 200px;
+            margin-left: 10px;
+            transition: width 0.4s ease;
+        }
+
+        #search-bar:focus {
+            width: 250px;
+            outline: none;
+        }
+
+        #search-button {
+            background-color: #ff5a5f;
+            border: none;
+            color: white;
+            padding: 8px 16px;
+            margin-left: 10px;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        #search-button:hover {
+            background-color: #333;
+        }
+
+        header {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('rohit_background.jpg') center/cover no-repeat;
+            color: white;
+        }
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.5em;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .about-section {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: white;
+        }
+        .about-section h2 {
+            font-size: 2.5em;
+            color: #333;
+        }
+        .about-section p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 20px auto;
+            line-height: 1.6;
+            color: #555;
+        }
+        .learn-more-btn {
+            background-color: #ff5a5f;
+            color: white;
+            padding: 12px 25px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background 0.3s ease;
+        }
+        .learn-more-btn:hover {
+            background-color: #333;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #333;
+            color: white;
+            position: relative;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About</a>
+                <ul>
+                    <li><a href="rohitphotos.html">Gallery</a></li>
+                    <li><a href="Details.html">Career Overview</a></li>
+                    <li><a href="double.html">Double Century Records</a></li>
+                    <li><a href="video.html">Videos</a></li>
+                </ul>
+            </li>
+            <li><a href="WorldCup.html">T20 World Cup Journey</a></li>
+            <li><a href="Rohit-RecodsFeats.html">Record-Breaking Feats</a></li>
+            <li><a href="connect.html">Connect with Rohit</a></li>
+            <li>
+                <form id="search-form" onsubmit="searchGoogle(event)">
+                    <input type="text" id="search-bar" placeholder="Search Rohit Sharma">
+                    <button id="search-button" type="submit">Search</button>
+                </form>
+            </li>
+            <li><a href="Updates.html">Updates</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+        </ul>
+    <header>
+        <h1>Welcome to the Official Rohit Sharma Fan Page</h1>
+        <p>Discover the journey, achievements, and moments that have made Rohit Sharma a cricketing legend.</p>
+    </header>
+    <section class="about-section">
+        <h2>About Rohit Sharma</h2>
+        <p>Rohit Sharma is an Indian international cricketer and captain of the Indian national cricket team. Known for his exceptional talent, he holds the record for the highest individual score in a one-day international match. His journey from the streets of Mumbai to leading India to victories is nothing short of extraordinary.</p>
+        <a href="https://www.bcci.tv/players/6/rohit-sharma?platform=international&type=men" target="_blank">
+            <button class="learn-more-btn">Learn More</button>
+        </a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Rohit Sharma Fan Page. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function searchGoogle(event) {
+            event.preventDefault();
+            const query = document.getElementById('search-bar').value;
+            if (query) {
+                const googleSearchUrl = `https://www.google.com/search?q=${encodeURIComponent(query)}+Rohit+Sharma`;
+                window.open(googleSearchUrl, '_blank');
+            } else {
+                alert("Please enter a search term");
+            }
+        }
+    </script>
+
+</body>
+</html>

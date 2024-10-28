@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #e3f2fd, #90caf9);
+            color: #333;
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .about-header h1 {
+            font-size: 3em;
+            color: #333;
+        }
+
+        .about-header p {
+            font-size: 1.2em;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .team-section {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .team-member {
+            width: 300px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .team-member img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover img {
+            transform: scale(1.1);
+        }
+
+        .team-member h3 {
+            font-size: 1.8em;
+            margin: 15px 0 5px 0;
+            color: #333;
+        }
+
+        .team-member p {
+            font-size: 1em;
+            color: #777;
+        }
+
+        .values-section {
+            margin-top: 60px;
+        }
+
+        .values-section h2 {
+            font-size: 2.5em;
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .value-card {
+            background-color: #f9f9f9;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .value-card:hover {
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .value-card h3 {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .value-card p {
+            font-size: 1em;
+            color: #666;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 50px;
+            position: relative;
+        }
+
+        .footer p {
+            margin: 10px 0;
+        }
+
+        .social-links {
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 24px;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #90caf9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="about-container">
+        <div class="about-header">
+            <h1>About Us</h1>
+            <p>Discover the passionate team behind the Rohit Sharma Fan Page. Learn more about our mission and dedication to creating a comprehensive resource for fans.</p>
+        </div>
+
+        <div class="team-section">
+            <div class="team-member">
+                <img src="Varunkumar12.jpg" alt="Founder Image">
+                <h3>Varun Kumar</h3>
+                <p>Founder & Developer</p>
+            </div>
+
+            <div class="team-member">
+                <img src="Varunkumar13.jpg" alt="Designer Image">
+                <h3>Varun Kumar</h3>
+                <p>Lead Designer</p>
+            </div>
+
+            <div class="team-member">
+                <img src="VarunKumar14.jpg" alt="Content Creator Image">
+                <h3>Varun Kumar</h3>
+                <p>Content Strategist</p>
+            </div>
+        </div>
+
+        <div class="values-section">
+            <h2>Our Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <h3>Passion for Cricket</h3>
+                    <p>We are driven by our love for the game and our admiration for Rohit Sharma's incredible journey.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Commitment to Fans</h3>
+                    <p>We are dedicated to bringing fans the best content, updates, and resources related to Rohit Sharma.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Innovation & Creativity</h3>
+                    <p>We aim to create an engaging, interactive experience for fans with cutting-edge design and content.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Rohit Sharma Fan Page. All Rights Reserved.</p>
+     
+    </div>
+
+</body>
+
+</html>

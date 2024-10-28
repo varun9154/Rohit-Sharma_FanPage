@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohit Sharma's Details</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('rohit-sharma.jpg') no-repeat center center/cover;
+            background-blend-mode: overlay;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .container:hover {
+            transform: scale(1.02);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .header {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .header img {
+            border-radius: 50%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .header img:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 10px 0;
+            animation: fadeIn 1s ease-in;
+        }
+
+        p {
+            font-style: italic;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th, td {
+            padding: 12px;
+            font-size: 16px;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        th:hover {
+            background-color: #45a049;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                background-position: top;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            table, th, td {
+                font-size: 14px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <img src="varun.jpeg" width="200px" height="200px" alt="Rohit Sharma">
+        <h1>Rohit Gurunath Sharma</h1>
+        <p>
+            Date of Birth: 30 April 1987 (Age 37) <br>
+            Nickname: Hitman, Ro, Shana <br>
+            Batting Style: Right-handed Batsman <br>
+            Bowling Style: Right-arm Off Break
+        </p>
+    </div>
+
+    <table id="statsTable">
+        <tr>
+            <th onclick="sortTable(0)">Competition</th>
+            <th onclick="sortTable(1)">ODI</th>
+            <th onclick="sortTable(2)">T20</th>
+            <th onclick="sortTable(3)">Test</th>
+            <th onclick="sortTable(4)">First Class</th>
+        </tr>
+        <tr>
+            <td>Matches</td>
+            <td>262</td>
+            <td>159</td>
+            <td>59</td>
+            <td>120</td>
+        </tr>
+        <tr>
+            <td>Runs Scored</td>
+            <td>10,709</td>
+            <td>4,231</td>
+            <td>4,137</td>
+            <td>9,123</td>
+        </tr>
+        <tr>
+            <td>Batting Average</td>
+            <td>49.12</td>
+            <td>32.05</td>
+            <td>45.46</td>
+            <td>52.73</td>
+        </tr>
+        <tr>
+            <td>100s/50s</td>
+            <td>31/55</td>
+            <td>5/32</td>
+            <td>12/17</td>
+            <td>29/37</td>
+        </tr>
+        <tr>
+            <td>Top Score</td>
+            <td>264</td>
+            <td>121*</td>
+            <td>212</td>
+            <td>309*</td>
+        </tr>
+        <tr>
+            <td>Wickets</td>
+            <td>9</td>
+            <td>1</td>
+            <td>2</td>
+            <td>24</td>
+        </tr>
+        <tr>
+            <td>Best Bowling</td>
+            <td>2/27</td>
+            <td>1/22</td>
+            <td>1/26</td>
+            <td>4/41</td>
+        </tr>
+        <tr>
+            <td>Catches</td>
+            <td>93</td>
+            <td>103</td>
+            <td>60</td>
+            <td>104</td>
+        </tr>
+    </table>
+</div>
+
+<script>
+    // Sort table columns
+    function sortTable(n) {
+        const table = document.getElementById("statsTable");
+        let rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+        switching = true;
+        dir = "asc"; 
+
+        while (switching) {
+            switching = false;
+            rows = table.rows;
+
+            for (i = 1; i < (rows.length - 1); i++) {
+                shouldSwitch = false;
+                x = rows[i].getElementsByTagName("TD")[n];
+                y = rows[i + 1].getElementsByTagName("TD")[n];
+
+                if (dir === "asc") {
+                    if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                        shouldSwitch = true;
+                        break;
+                    }
+                } else if (dir === "desc") {
+                    if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                        shouldSwitch = true;
+                        break;
+                    }
+                }
+            }
+
+            if (shouldSwitch) {
+                rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                switching = true;
+                switchcount++;
+            } else {
+                if (switchcount === 0 && dir === "asc") {
+                    dir = "desc";
+                    switching = true;
+                }
+            }
+        }
+    }
+</script>
+
+</body>
+</html>

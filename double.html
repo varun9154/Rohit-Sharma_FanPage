@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohit Sharma's Double Centuries in ODI</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #dddddd;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #e0f7fa;
+            cursor: pointer;
+        }
+
+        .highlight {
+            background-color: #ffe082 !important;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            table, th, td {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Rohit Sharma’s ODI Double Centuries</h1>
+    <p>Since becoming an opener in 2013, Rohit has solidified his position as one of the premier opening batters in limited-overs cricket. His consistent performances have yielded three double centuries in ODIs, the most by any batter in this format. Below is a list of Rohit’s ODI double centuries:</p> 
+    
+    <h1>209 vs Australia, Bangalore, 2013</h1>
+    <p>In a gripping seven-match ODI series between India and Australia, Rohit Sharma’s form was electric. He became the third Indian to score a double century in the 50-over format, contributing a monumental 209 off 158 balls. This helped India amass a total of 383/6, ultimately winning the match by 57 runs and clinching the series 3-2.</p>
+
+    <h1>264 vs Sri Lanka, Kolkata, 2014</h1>
+    <p>Rohit Sharma broke records by scoring 264 against Sri Lanka, the highest individual score in ODI history. During the fourth match of a five-game series, Rohit’s masterful 264 off 173 balls led India to 404/5. India won the match by a substantial margin of 153 runs.</p>
+
+    <h1>208 vs Sri Lanka, Mohali, 2017</h1>
+    <p>Facing a must-win situation after losing the first ODI, India was led by Rohit Sharma in the absence of regular skipper Virat Kohli. Rohit rose to the occasion, remaining unbeaten on 208 off 153 balls, and helping India post a total of 392/4. India won the match by 141 runs.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Runs</th>
+                <th>Balls</th>
+                <th>6s</th>
+                <th>4s</th>
+                <th>Strike Rate</th>
+                <th>Opponent Team</th>
+                <th>Venue</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>209</td>
+                <td>158</td>
+                <td>16</td>
+                <td>12</td>
+                <td>132</td>
+                <td>Australia</td>
+                <td>Bengaluru</td>
+                <td>02/11/2013</td>
+            </tr>
+            <tr>
+                <td>264</td>
+                <td>173</td>
+                <td>9</td>
+                <td>33</td>
+                <td>173</td>
+                <td>Sri Lanka</td>
+                <td>Kolkata</td>
+                <td>13/11/2014</td>
+            </tr>
+            <tr>
+                <td>208</td>
+                <td>153</td>
+                <td>12</td>
+                <td>13</td>
+                <td>135</td>
+                <td>Sri Lanka</td>
+                <td>Mohali</td>
+                <td>13/12/2017</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+    // JavaScript to highlight the row on click
+    document.querySelectorAll('table tbody tr').forEach(function(row) {
+        row.addEventListener('click', function() {
+            // Remove 'highlight' class from all rows
+            document.querySelectorAll('table tbody tr').forEach(function(row) {
+                row.classList.remove('highlight');
+            });
+
+            // Add 'highlight' class to the clicked row
+            this.classList.add('highlight');
+        });
+    });
+</script>
+
+</body>
+</html>
